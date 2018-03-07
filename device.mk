@@ -32,12 +32,6 @@ endif
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
-# APN
-ifeq ($(TARGET_PRODUCT),aosp_berkeley)
-PRODUCT_COPY_FILES += \
-    device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
-endif
-
 # Device init scripts
 PRODUCT_PACKAGES += \
     init.kirin970.rc
@@ -53,7 +47,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
-
 
 # Input
 PRODUCT_COPY_FILES += \
