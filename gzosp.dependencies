@@ -1,0 +1,12 @@
+[
+  {
+    "repository": "GZOSP-Devices/device_huawei_berkeley",
+    "target_path": "device/huawei/berkeley",
+    "branch": "8.1"
+  },
+  {
+    "repository": "BigTopKrazies/vendor_huawei_berkeley",
+    "target_path": "vendor/huawei",
+    "branch": "8.1"
+  }
+]
