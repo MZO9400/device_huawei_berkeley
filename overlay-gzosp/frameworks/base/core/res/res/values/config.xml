@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2014-2015 The CyanogenMod Project
+     Copyright (C) 2018 CarbonROM
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,6 +15,5 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Defaults for LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR -->
-    <integer name="def_force_show_navbar">1</integer>
+    <bool name="config_showNavigationBar">true</bool>
 </resources>

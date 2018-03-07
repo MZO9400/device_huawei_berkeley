@@ -21,14 +21,9 @@ $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
-ifeq ($(TARGET_PRODUCT),lineage_berkeley)
+ifeq ($(TARGET_PRODUCT),gzosp_berkeley)
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-endif
-
-ifeq ($(TARGET_PRODUCT),carbon_berkeley)
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-carbon
+    $(LOCAL_PATH)/overlay-gzosp
 endif
 
 # Boot animation
@@ -45,11 +40,6 @@ endif
 PRODUCT_PACKAGES += \
     init.kirin970.rc
 
-ifeq ($(TARGET_PRODUCT),lineage_berkeley)
-PRODUCT_PACKAGES += \
-    init.kirin970.lineage.rc
-endif
-
 # Display
 PRODUCT_PACKAGES += \
     libion
@@ -62,9 +52,10 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
 
-# KeyHandler
-PRODUCT_PACKAGES += \
-    org.lineageos.keyhandler
+
+# Input
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/fingerprint.kl:system/usr/keylayout/fingerprint.kl
 
 # NFC
 PRODUCT_PACKAGES += \

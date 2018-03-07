@@ -16,4 +16,4 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_berkeley.mk \
-    $(LOCAL_DIR)/carbon_berkeley.mk
+    $(LOCAL_DIR)/gzosp_berkeley.mk

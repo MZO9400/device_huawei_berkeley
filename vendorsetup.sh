@@ -15,4 +15,4 @@
 #
 
 add_lunch_combo aosp_berkeley-userdebug
-add_lunch_combo carbon_berkeley-userdebug
+add_lunch_combo gzosp_berkeley-userdebug
