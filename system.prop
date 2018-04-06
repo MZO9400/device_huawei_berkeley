@@ -2,7 +2,10 @@
 ro.cp_system_other_odex=0
 
 # Enable ADB authentication
-ro.adb.secure=1
+ro.adb.secure=0
+persist.service.adb.enable=1
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb
 
 # Disable FP nav by default
 sys.fpnav.enabled=0
