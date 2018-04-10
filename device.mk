@@ -15,7 +15,7 @@
 #
 
 $(call inherit-product-if-exists, vendor/huawei/berkeley/berkeley-vendor.mk)
-$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+$(call inherit-product-if-exists, vendor/kronicgapps/kronic-gapps.mk)
 
 GAPPS_VARIANT := mini
 
@@ -23,9 +23,9 @@ GAPPS_VARIANT := mini
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
-ifeq ($(TARGET_PRODUCT),gzosp_berkeley)
+ifeq ($(TARGET_PRODUCT),invictrix_berkeley)
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-gzosp
+    $(LOCAL_PATH)/overlay-invictrix
 endif
 
 # Boot animation

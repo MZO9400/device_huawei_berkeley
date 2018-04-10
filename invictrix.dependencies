@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "InvictrixROM-Devices/vendor_huawei_berkeley",
+    "target_path": "vendor/huawei/berkeley",
+    "branch": "o-mr1",
+    "remote": "github"
+  },
+  {
+    "repository": "xlxfoxxlx/kronicgapps",
+    "target_path": "vendor/kronicgapps",
+    "branch": "oreo-mr1",
+    "remote": "github"
+  }
+]
