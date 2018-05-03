@@ -219,4 +219,5 @@
     <!-- Should the pinner service pin the Camera application? -->
     <bool name="config_pinnerCameraApp">true</bool>
 
+    <integer name="config_screenBrightnessSettingMinimum">1</integer>
 </resources>
