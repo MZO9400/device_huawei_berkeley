@@ -18,7 +18,7 @@ on property:sys.fpnav.enabled=1
     stop fps_hal_ext
     start fps_hal_ext
 
-on property:ro.lineage.device=*
+on property:ro.invictrix.device=*
     setprop qemu.hw.mainkeys 1
 
 service hisupl_service /vendor/bin/hw/vendor.huawei.hardware.hisupl@1.0-service
