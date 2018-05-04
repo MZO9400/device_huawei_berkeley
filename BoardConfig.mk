@@ -32,9 +32,26 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Kernel
-BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_NO_KERNEL := false
-TARGET_PREBUILT_KERNEL := /dev/null
+TARGET_KERNEL_CONFIG := berk_defconfig
+BOARD_KERNEL_BASE := 0x00078000
+BOARD_KERNEL_IMAGE_NAME := Image.gz
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_TAGS_OFFSET := 0x07988000
+BOARD_KERNEL_OFFSET := 0x00008000
+BOARD_SECOND_OFFSET := 0x00e88000
+BOARD_RAMDISK_OFFSET := 0x07b88000
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+TARGET_KERNEL_SOURCE := $(ANDROID_BUILD_TOP)/kernel/huawei/berkeley
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+
+BOARD_KERNEL_CMDLINE := loglevel=4 \
+			initcall_debug=n \
+			page_tracker=on \
+			unmovable_isolate1=2:192M,3:224M,4:256M \
+			printktimer=0xfff0a000,0x534,0x538 \
+			androidboot.selinux=enforcing \
+
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := berkeley,kirin970
