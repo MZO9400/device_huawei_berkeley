@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-include build/make/target/board/generic_arm64_a/BoardConfig.mk
-
 DEVICE_PATH := device/huawei/berkeley
 
 # Platform
@@ -51,7 +49,6 @@ BOARD_KERNEL_CMDLINE := loglevel=4 \
 			unmovable_isolate1=2:192M,3:224M,4:256M \
 			printktimer=0xfff0a000,0x534,0x538 \
 			androidboot.selinux=enforcing \
-
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := berkeley,kirin970
